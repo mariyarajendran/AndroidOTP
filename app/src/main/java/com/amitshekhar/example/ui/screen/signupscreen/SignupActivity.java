@@ -10,6 +10,7 @@ import com.amitshekhar.example.data.local.PreferencesHelper;
 import com.amitshekhar.example.network.NetworkMvpView;
 import com.amitshekhar.example.network.NetworkPresenter;
 import com.amitshekhar.example.ui.base.BaseActivity;
+import com.amitshekhar.example.ui.screen.locationscreen.LocationScreen;
 import com.amitshekhar.example.ui.screen.loginscreen.PojoLoginUserDetails;
 import com.amitshekhar.example.utils.AlertUtils;
 import com.amitshekhar.example.utils.CommonUtils;
@@ -86,7 +87,8 @@ public class SignupActivity extends BaseActivity implements SignupMvpView, Netwo
 
     @Override
     public void showSignupResponseData(String msg, PojoSignupUserDetails pojoSignupUserDetails, int event) {
-        alertUtils.showAlertDialog(msg, 0);
+        commonUtils.showToastLong(msg);
+        navigateRoutes(0);
     }
 
     @Override
@@ -113,6 +115,13 @@ public class SignupActivity extends BaseActivity implements SignupMvpView, Netwo
         }
     }
 
+
+    public void navigateRoutes(int events) {
+        if (events == 0) {
+            commonUtils.navigationRoutes(getApplicationContext(), LocationScreen.class);
+        }
+
+    }
 
     public void getSessionLoginDetails() {
         PojoLoginUserDetails pojoLoginUserDetails = new PojoLoginUserDetails();
