@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:focusable="false"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    tools:context="com.amitshekhar.example.ui.screen.loginscreen.LoginActivity">
+
+
+    <include
+        android:id="@+id/common_header_layout_signup"
+        layout="@layout/common_header"></include>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/textinput_signup_username"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginRight="25dp"
+                        android:padding="5dp">
+
+                        <com.amitshekhar.example.utils.fonts.CustomTextEditText
+                            android:id="@+id/textedit_signup_username"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/user_name"
+                            android:inputType="text"
+                            android:textColor="@color/colorBlack"
+                            android:textColorHighlight="@color/colorGreen"
+                            android:textColorHint="@color/colorGreen"
+                            android:textColorLink="@color/colorGreen"
+                            android:textSize="17sp" />
+                    </android.support.design.widget.TextInputLayout>
+
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/textinput_signup_emailid"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textinput_signup_username"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="25dp"
+                        android:padding="5dp">
+
+                        <com.amitshekhar.example.utils.fonts.CustomTextEditText
+                            android:id="@+id/textedit_signup_emailid"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/email_id"
+                            android:inputType="textEmailAddress"
+                            android:textColor="@color/colorBlack"
+                            android:textColorHighlight="@color/colorGreen"
+                            android:textColorHint="@color/colorGreen"
+                            android:textColorLink="@color/colorGreen"
+                            android:textSize="17sp" />
+                    </android.support.design.widget.TextInputLayout>
+
+
+                    <com.amitshekhar.example.utils.fonts.CustomButton
+                        android:id="@+id/signup_btn_signup"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textinput_signup_emailid"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="30dp"
+                        android:background="@drawable/custom_round_button"
+                        android:text="@string/signup"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="16sp" />
+
+
+                </RelativeLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>
