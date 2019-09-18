@@ -9,6 +9,7 @@ import com.amitshekhar.example.data.local.PreferencesHelper;
 import com.amitshekhar.example.network.NetworkMvpView;
 import com.amitshekhar.example.network.NetworkPresenter;
 import com.amitshekhar.example.ui.base.BaseActivity;
+import com.amitshekhar.example.ui.screen.dashboardscreen.Dashboard;
 import com.amitshekhar.example.ui.screen.signupscreen.SignupActivity;
 import com.amitshekhar.example.utils.CommonUtils;
 import com.amitshekhar.example.utils.AlertUtils;
@@ -120,7 +121,7 @@ public class LoginActivity extends BaseActivity implements LoginMvpView, Network
 
     public void navigateRoutes(int events) {
         if (events == 0) {
-            commonUtils.navigationRoutes(getApplicationContext(), SignupActivity.class);
+            commonUtils.navigationRoutes(getApplicationContext(), Dashboard.class);
         }
 
     }

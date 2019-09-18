@@ -23,5 +23,7 @@
     <string name="nice_to_meet">Hi, nice to meet you!</string>
     <string name="location_hint">Set your location to start exploring \n restaurants around you</string>
     <string name="set_location_manually">Set your location manually</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
 
 </resources>
